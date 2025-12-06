@@ -31,4 +31,6 @@ main = do
   let ids = filter (/= "") ids'
   let tupIntervals = map ((\(l, h) -> (read l :: Integer, read h :: Integer)) . splitDash) intervals
   let sorted = mergeOverlapping $ sortByFirstValue tupIntervals
+  print $ sorted
+  print $ length sorted
   print  $ sum $ map (\(l,h) -> 1+(h-l)) sorted

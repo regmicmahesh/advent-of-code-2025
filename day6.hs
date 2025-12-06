@@ -9,14 +9,11 @@ addAll = doAll sum
 multiplyAll :: [String] -> Integer
 multiplyAll = doAll product
 
-
 calculate :: (String, [String]) -> Integer
 calculate (op, xs)
     | op == "+" = addAll xs
     | op == "*" = multiplyAll xs
     | otherwise = error "what is that operator?"
-
-
 
 main :: IO ()
 main = do

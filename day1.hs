@@ -1,7 +1,3 @@
-
-
-
-
 roundedSubtract :: Int -> Int -> Int
 roundedSubtract x y
     | (x-y) < 0 = (x-y) + 100
