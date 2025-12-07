@@ -74,8 +74,3 @@ main = do
   let nums = reverse $ transpose items
   let items = map extractOperator (chunk nums)
   print $ sum  $ map calculate items
-
-
-index ::  [Int] -> Int -> Int
-index [a] b = if (a /= b) then -1 else 1
-index (x:xs) b = if x == b then 1 else 1 + index xs b
